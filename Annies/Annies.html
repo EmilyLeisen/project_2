@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Annie's Parlour</title>
+/*
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+*/
+<head>
+    <style>
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .wrapper {
+            width: 1200px;
+            height: 4500px;
+            background-color: #CC0000;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .nav_container {
+            width: 1180px;
+            height: 80px;
+            margin: 0 auto;
+            /*background-color: darkturquoise;*/
+            text-align: center;
+
+        }
+
+        nav {
+            width: 1180px;
+            height: 100px;
+            color: #CC0000;
+            display: inline-block;
+            margin-left: 200px;
+            margin-top: 25px;
+        }
+
+        .logo {
+            /*display: inline-block;*/
+            /*margin-top: 50px;*/
+            /*margin-left: 10px;*/
+            position: absolute;
+            top: 15px;
+            left: 15px;
+
+        }
+
+        #section_01 {
+            width: 1180px;
+            height: 800px;
+            background-image: url("outside.jpg");
+            color: #CC0000;
+            margin: 0 auto;
+        }
+
+        #section_02 {
+            width: 1180px;
+            height: 825px;
+            background-image:;
+            color: #CC0000;
+            margin: 0 auto;
+        }
+
+
+
+
+        .pattern {
+            position: absolute;
+            top: 800px;
+        }
+
+        /*#section_02, #section_04 {*/
+            /*width: 1180px;*/
+            /*height: 800px;*/
+            /*background-color: white;*/
+            /*color: #CC0000;*/
+            /*margin: 0 auto;*/
+            /*position: relative;*/
+            /*bottom: 25px;*/
+        /*}*/
+
+        p#nav_section_01, p#nav_section_02, p#nav_section_03, p#nav_section_04, p#nav_section_05 {
+            display: inline;
+            font-size: 24px;
+            font-family: sans-serif;
+            font-weight: lighter;
+            padding: 0 25px;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: black;
+        }
+
+        p {
+            padding-top: 25px;
+            padding-left: 10px;
+            font-family: sans-serif;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 25px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div id="top"></div>
+<div class="wrapper">
+
+    <!--<div id="wrapper">-->
+    <!--<img src="Outside.jpg"-->
+    <!--</div>-->
+
+
+    <div class="nav_container">
+
+        <img class="logo" src="anniesparlour.png"/>
+        <nav>
+            <a href="#section_01"><p id="nav_section_02">Location / Hours</p></a>
+            <a href="#section_02"><p id="nav_section_03">Menu</p></a>
+            <a href="#section_03"><p id="nav_section_04">Order</p></a>
+            <a href="#section_04"><p id="nav_section_05">Reviews</p></a>
+        </nav>
+
+    </div>
+
+    <div id="section_01">
+        <p></p>
+        <img class="pattern" src="pattern.png" width="1180px"/>
+    </div><!--end of section 01-->
+
+    <div id="section_02"><p>Location/Hours</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45154.158281292686!2d-93.24195620692902!3d44.981570799000785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9a77cc1f5af10e03!2sAnnie&#39;s+Parlour!5e0!3m2!1sen!2sus!4v1542819605535"
+                width="1180" height="700" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <div id="section_03"><p>Menu</p></div>
+
+    <div id="section_04"><p>Order</p></div>
+
+    <div id="section_05"><p>Reviews</p></div>
+
+    <a href="#top"><p class="footer">SCROLL BACK TO TOP</p></a>
+</div><!--end of wrapper -->
+<script>
+    $(document).ready(function () {
+// Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+// Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+// Prevent default anchor click behavior
+                event.preventDefault();
+
+// Store hash
+                var hash = this.hash;
+
+// Using jQuery's animate() method to add smooth page scroll
+// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+// Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+</body>
